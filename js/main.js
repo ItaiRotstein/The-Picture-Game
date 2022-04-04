@@ -47,23 +47,14 @@ function nextQuest() {
 }
 
 function renderQuest() {
-    var elAnswers = document.querySelector('.answers')
-    var img = document.querySelector('img')
-    img.src = `img/${gCurrQuestIdx}.jpg`
+    var elGameSpace = document.querySelector('.game')
     var strHTML = ''
-    
-    for (var i = 0; i < gQuests[gCurrQuestIdx].opts; i++) {
-        strHTML += `<div class="answer" data-opt="${i}" onclick="checkAnswer(this)">${gQuests[gCurrQuestIdx].opts[i]}</div>`
+    for (var i = 0; i < gQuests.length; i++) {
+        if (gCurrQuestIdx === i) {
+            strHTML += `<img src="img/${i + 1}.jpg"><div class="answers"><div class="answer" data-opt="0" onclick="checkAnswer(this)">${gQuests[i].opts[0]}</div><div class="answer" data-opt="1" onclick="checkAnswer(this)">${gQuests[i].opts[1]}</div></div>`
+        }
     }
-    
-
-
-    // for (var i = 0; i < gQuests.length; i++) {
-    //     if (gCurrQuestIdx === i) {
-    //         strHTML += `<img src="img/${i + 1}.jpg"><div class="answers"><div class="answer" data-opt="0" onclick="checkAnswer(this)">${gQuests[i].opts[0]}</div><div class="answer" data-opt="1" onclick="checkAnswer(this)">${gQuests[i].opts[1]}</div></div>`
-    //     }
-    // }
-    elAnswers.innerHTML = strHTML
+    elGameSpace.innerHTML = strHTML
 }
 
 

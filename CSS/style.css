@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-* {
-    box-sizing: border-box;    
-}
-
 body {
     font-family: 'Roboto', sans-serif ;
     background-color: rgb(247, 234, 214);
@@ -19,7 +15,6 @@ body {
 .board {
     background-color: rgb(221, 255, 96);
     border: ridge grey 10px;
-    border-radius: 20px;
 }
 
 .game {
@@ -33,7 +28,6 @@ h1 {
 img {
     width: 275px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
 }
 
 .answer {
